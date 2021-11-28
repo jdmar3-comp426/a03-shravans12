@@ -53,13 +53,12 @@ export function maxAndMin(numbers) {
  *
  */
 export function countArray(array) {
-let count = {};
-array.forEach(i => {
-    if (count[i]) {
-        count[i]++;
-    } else {
-        count[i] = 1;
-    
-    }
-});
+    let count = new Object();
+    array.forEach((k) => {
+        if (!Object.hasOwnProperty(''+ k)){
+            obj['' + k] = 0;
+        }
+        obj['' + k]++;
+    })
+    return obj;
 }
